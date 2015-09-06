@@ -1,0 +1,11 @@
+c:\users\eldin\documents\visual studio 2015\Projects\TF2C Auto Joiner\TF2C Auto Joiner\bin\Debug\TF2C Auto Joiner.exe.config
+c:\users\eldin\documents\visual studio 2015\Projects\TF2C Auto Joiner\TF2C Auto Joiner\bin\Debug\TF2C Auto Joiner.exe
+c:\users\eldin\documents\visual studio 2015\Projects\TF2C Auto Joiner\TF2C Auto Joiner\bin\Debug\TF2C Auto Joiner.pdb
+c:\users\eldin\documents\visual studio 2015\Projects\TF2C Auto Joiner\TF2C Auto Joiner\obj\Debug\TF2C Auto Joiner.exe
+c:\users\eldin\documents\visual studio 2015\Projects\TF2C Auto Joiner\TF2C Auto Joiner\obj\Debug\TF2C Auto Joiner.pdb
+C:\Users\Eldin\Documents\GitHub\TF2CAutoJoiner\TF2C Auto Joiner\TF2C Auto Joiner\bin\Debug\TF2C Auto Joiner.exe.config
+C:\Users\Eldin\Documents\GitHub\TF2CAutoJoiner\TF2C Auto Joiner\TF2C Auto Joiner\obj\Debug\TF2C Auto Joiner.exe
+C:\Users\Eldin\Documents\GitHub\TF2CAutoJoiner\TF2C Auto Joiner\TF2C Auto Joiner\obj\Debug\TF2C Auto Joiner.pdb
+C:\Users\Eldin\Documents\GitHub\TF2CAutoJoiner\TF2C Auto Joiner\TF2C Auto Joiner\bin\Debug\TF2C Auto Joiner.exe
+C:\Users\Eldin\Documents\GitHub\TF2CAutoJoiner\TF2C Auto Joiner\TF2C Auto Joiner\bin\Debug\TF2C Auto Joiner.pdb
+C:\Users\Eldin\Documents\GitHub\TF2CAutoJoiner\TF2C Auto Joiner\TF2C Auto Joiner\obj\Debug\TF2C Auto Joiner.csprojResolveAssemblyReference.cache

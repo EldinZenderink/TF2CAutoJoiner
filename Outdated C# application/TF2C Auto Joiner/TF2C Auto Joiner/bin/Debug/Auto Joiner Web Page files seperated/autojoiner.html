@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>TF2C Auto Joiner</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="clientJs/lobbieParser.js"></script>
+  <script src="clientJs/parameters.js"></script>
+</head>
+<body>
+  <div id="navBar" class="row valign-wrapper center-align fixed customNav hide-on-small-only">
+        
+    <div class="col s3"><h5 class="valign left navBarTitle"> TF2C Auto Joiner </h5>
+     
+    </div>
+    
+    
+  </div>  
+  <div class="col s1"></div>
+  
+  <div class="row valign-wrapper hide-on-med-and-up center-align fixed customNav">
+    <h5 class="valign left navBarTitle"> Anime Updater </h5>
+  </div>
+
+  
+
+  <div class="container">
+        
+      <!--   Rss Stuff include logics/receiver.ejs %> -->
+    
+      
+      <div class="row" id="settings" style="margin-top: 30px; text-align: center;">
+          <div class="col s2 center">
+              Select Region:<br>
+              <a class='dropdown-button btn grey' href='#' data-activates='region' id="regiodrop">Region</a>
+
+              <!-- Dropdown Structure -->
+              <ul id='region' class='dropdown-content'>
+                <li><a onclick="setRegion('EU', 'Europe')">Europe</a></li>
+                <li><a onclick="setRegion('NA', 'North America')">North America </a></li>
+                <li><a onclick="setRegion('SA', 'South America')">South America </a></li>
+                <li><a onclick="setRegion('RU', 'Russia')">Russia  </a></li>
+                <li><a onclick="setRegion('AS', 'Australia')">Asia </a></li>
+                <li><a onclick="setRegion('AF', 'Africa')">Africa </a></li>
+                <li><a onclick="setRegion('AU', 'Australia')">Australia </a></li>
+                <li><a onclick="setRegion('all', 'All')">All</a></li>
+              </ul>
+          </div>
+          
+          <div class="col s2 center">
+              Select Game Type:<br>
+              <a class='dropdown-button btn grey' href='#' data-activates='gametype' id="gametypedrop">Game Type</a>
+
+              <!-- Dropdown Structure -->
+              <ul id='gametype' class='dropdown-content'>
+                <li><a onclick="setGameType('Highlander')">Highlander</a></li>
+                <li><a onclick="setGameType('6v6')">6v6</a></li>
+                <li><a onclick="setGameType('4v4')">4v4 </a></li>
+                <li><a onclick="setGameType('Ultiduo')">Ultiduo</a></li>
+                <li><a onclick="setGameType('BBal')">BBal </a></li>
+                <li><a onclick="setGameType('1v1')">Test 1v1 (Not Working ATM) </a></li>
+                <li><a onclick="setGameType('all')">All</a></li>
+              </ul>
+          </div>
+          
+          <div class="col s2 center">
+             Select Map Type:<br>
+              <a class='dropdown-button btn grey' href='#' data-activates='maptype' id="maptypedrop">Map Type</a>
+
+              <!-- Dropdown Structure -->
+              <ul id='maptype' class='dropdown-content'>
+                <li><a onclick="setMapType('cp', 'Check Point')">Check Point</a></li>
+                <li><a onclick="setMapType('pl', 'Payload')">Payload</a></li>
+                <li><a onclick="setMapType('koth', 'King of the Hill')">King of the Hill</a></li>
+                <li><a onclick="setMapType('ctf', 'Capture The Flag')">Capture the Flag</a></li>
+                <li><a onclick="setMapType('all', 'All')">All</a></li>
+              </ul>
+          </div>
+          
+          <div class="col s2 center">
+             Select Class(es):<br>
+              <a class='dropdown-button btn grey' href='#' data-activates='class' id="classdrop">Class(es)</a>
+
+              <!-- Dropdown Structure -->
+              <ul id='class' class='dropdown-content'>
+                <li>
+                  <input onclick="setClass('scout')" type="checkbox" id="scout" />
+                  <label for="scout">Scout</label>
+                </li>
+                <li>
+                  <input onclick="setClass('sniper')" type="checkbox" id="sniper" />
+                  <label for="sniper">Sniper</label>
+                </li>
+                <li>
+                  <input onclick="setClass('spy')" type="checkbox" id="spy" />
+                  <label for="spy">Spy</label>
+                </li>
+                <div id="solly_hl">
+                  <li>
+                    <input onclick="setClass('solly')" type="checkbox" id="solly" />
+                    <label for="solly">Solly</label>
+                  </li>
+                </div>
+                <div id="solly_6v6">
+                  <li>
+                    <input onclick="setClass('roamer')" type="checkbox" id="roamer" />
+                    <label for="roamer">Roamer Solly</label>
+                  </li>
+                   <li>
+                    <input onclick="setClass('pocket')" type="checkbox" id="pocket" />
+                    <label for="pocket">Pocket Solly</label>
+                  </li>
+                </div>
+                <li>
+                  <input onclick="setClass('pyro')" type="checkbox" id="pyro" />
+                  <label for="pyro">Pyro</label>
+                </li>
+                <li>
+                  <input onclick="setClass('medic')" type="checkbox" id="medic" />
+                  <label for="medic">Medic</label>
+                </li>
+                <li>
+                  <input onclick="setClass('heavy')" type="checkbox" id="heavy" />
+                  <label for="heavy">Heavy</label>
+                </li>
+                <li>
+                  <input onclick="setClass('demo')" type="checkbox" id="demo" />
+                  <label for="demo">Demo</label>
+                </li>
+                <li>
+                  <input onclick="setClass('engineer')" type="checkbox" id="engineer" />
+                  <label for="engineer">Engineer</label>
+                </li>
+                
+              </ul>
+          </div>
+          
+          <div class="col s2 center">
+              Mumble:<br>
+              <div class="switch" onclick="setMumble()" id="setmumble" name="setmumble">
+                <label>
+                  Off
+                  <input id="showhidecheckboxes" name="setmumble" type="checkbox">
+                  <span class="lever"></span>
+                  On
+                </label>
+              </div>
+          </div>
+          
+          <div class="col s2 center">
+               Run Auto Joiner<br>
+              <button href="#" id="runbutton" class="btn grey" onclick="runAutoJoiner()"> START </button>
+          </div>
+          
+      </div>
+      
+      <div id="playsound">
+         <audio id="notification" src="http://cdn.frustra.org/sounds/sound_tf2/vo/engineer_yes02.mp3" preload="auto"></audio>
+      </div>
+     
+ 
+     
+          
+      
+      <div class="row">
+        <div class="col s12" id="iframehere">
+        </div>
+      </div>
+      
+      
+  </div>
+
+   <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="/js/materialize.js"></script>
+      <script src="/js/init.js"></script>
+     <script>
+          
+          $('.dropdown-button').dropdown({
+              inDuration: 300,
+              outDuration: 225,
+              constrain_width: false, // Does not change width of dropdown to that of the activator
+              hover: false, // Activate on hover
+              gutter: 0, // Spacing from edge
+              belowOrigin: true // Displays dropdown below the button
+            }
+          );
+          
+          $("#solly_6v6").hide();
+          
+          
+          $( document ).ready(function() {
+              $('#iframehere').html(' <iframe id="tf2center" src="http://tf2center.com/lobbies#id20b" style="min-width: 100%;" height="800" align="center"></iframe>');
+          });
+
+    
+          
+        </script>
+        
+
+  
+  </body>
+</html>

@@ -1,0 +1,166 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+/* main tags */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+main {
+    flex: 1 0 auto;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* buttons */
+
+.btn,
+.btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4886ff;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+.badge {
+    min-width: 3rem;
+    padding: 0 6px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: inherit;
+    color: #757575;
+    position: absolute;
+    right: 275px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* custom css */
+
+.alpha60 {
+    /* Fallback for web browsers that don't support RGBa */
+    
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+/* colors */
+
+.grey {
+    background-color: #555555 !important;
+}
+.orange {
+    background-color: #ffbf00;
+}
+.link {
+    color: #4886ff;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #ffbf00;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #555555;
+}
+
+[type="checkbox"].filled-in:checked+label:after {
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffbf00;
+    background-color: #ffbf00;
+    z-index: 0;
+}
+
+/* nav bar */
+
+.navBarTitle {
+    text-align: center;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.customNav {
+    width: 100%;
+    background-color: #555555;
+    z-index: 3;
+}
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #ffbf00;
+    will-change: left, right;
+}
+/* cards */
+
+.card .card-image .card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.card-banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+.customCard {
+    max-width: 225px;
+    height: 300px;
+    float: left;
+    margin-left: 10px;
+}
+.customCard-image {
+    height: 300px;
+}
+.customCard-title {
+    width: 100%;
+}
+/* positioning */
+
+.fixed {
+    position: fixed;
+}
+.container {
+    max-width: 85%;
+    margin-top: 50px;
+}
+/* unknown */
+
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
