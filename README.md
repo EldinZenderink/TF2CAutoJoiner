@@ -40,9 +40,9 @@ The autojoiner.html file works locally as well, so just put it in a folder and c
 ### Change Log
 
 #0.1.0
--no more local installation needed, runs now on a webhost!*
--removed iframe containing tf2center page, tf2center is a very rescource heavy webpage (10% single core usage (chrome)), this hole thing is designed to be very cpu friendly.
--pop up modal for logs.
+- no more local installation needed, runs now on a webhost!*
+- removed iframe containing tf2center page, tf2center is a very rescource heavy webpage (10% single core usage (chrome)), this hole thing is designed to be very cpu friendly.
+- pop up modal for logs.
 
 
 #0.0.3
