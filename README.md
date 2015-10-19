@@ -2,6 +2,8 @@
 
 TF2Center Auto Joiner is a materializecss / javascript based Auto Joiner is now finally a web application the works fully clientsided! *
 
+# THE WEBPAGE VERSION IS NO LONGER WORKING, TF2CENTER FIXED THEIR WEBSOCKET LEAK(whatever you want to call it), THE C# STAND ALONE APP IS STILL WORKING THOUGH!
+
 # Abilitys
 
   - Auto Join, no more manually clicking on lobbies.
@@ -24,13 +26,19 @@ This application parses the html source of http://tf2center.com/lobbies every se
 
 - Mumble option is not functional as of yet.
 
-### Web Page
+### Web Page (NO LONGER WORKS)
 
 [www.autojoiner.acoxi.com] (www.autojoiner.acoxi.com)
 
+### Web Page (NO LONGER WORKS)
+
+[Stand Alone Executable] (https://github.com/EldinZenderink/TF2CAutoJoiner/blob/master/Outdated%20C%23%20application/Executable/TF2C%20Auto%20Joiner.exe?raw=true)
+
+
 ### Installation
 
-The autojoiner.html file works locally as well, so just put it in a folder and click on it :D.
+Due to tf2center fixing their websocket leak, a webpage alone is not sufficient anymore. Therefor you need to download the stand alone executable as showen above. 
+YOU NEED TO HAVE CHROME INSTALLED! OTHER BROWSERS WILL NOT WORK AS OF YET. 
 
 ### Todos
 
@@ -53,13 +61,11 @@ The autojoiner.html file works locally as well, so just put it in a folder and c
 ### Disclaimer
 I (Eldin Zenderink) am not responsible for whatever happens when you use this (web)application. I am not affiliated with the developers of TF2CENTER. This application will be free forever. If the devlopers of TF2CENTER have a something to say about this application, send a mail to rareamvproductions@gmail.com. 
 
-### * Why is it not a desktop application anymore?
+### * Why change back to a desktop application instead of a web app?
 
-The big change came from the use of websockets, I knew for a long time that tf2center uses websockets to push the lobby changes to their client sided website. I have figured out wich ws(websocket) url they used to do that. Its not working exactly like I want, because normally a websocket server would send data while its staying connected to the client without reconnecting. But somehow this websocket server sends the full html data from their main page once when you connect to the websocket (why, for heavens sake?). Now i need to reconnect to that websocket server every second to get the desired results. But fortunately that removed the need to parse the html web page through http. Therefor I can now do everything through javascript and a webserver is not needed anymore to do the html retreiving, and because of that, it can run on any cheap webhost that just sends the html to the client.
+The webapp used a websocket glitch/bug that enabled it to request the full http html source page from tf2center through websockets, without interference with cross domain issues. Unfortunately they fixed the glitch, so we have to go back to a more primitive way of getting the lobby information, which can only be done on a desktop clientside. 
+My sincere aplogies for anyone who got hyped up about the website, this is for now the only way to get this working.
 
-### * Will you create a desktop application in the future for this?
-
-No, there is no need for it as long the webhost stays active. If you want to get a desktop application feeling, I suggest that you use Chrome and [follow this tutorial](http://www.howtogeek.com/141431/how-to-turn-web-apps-into-first-class-desktop-citizens/) to create a shortcut on your desktop, which opens the webpage in APP mode, just like my desktop application did. 
 
 License
 ----
