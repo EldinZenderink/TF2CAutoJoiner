@@ -30,7 +30,7 @@ This application parses the html source of http://tf2center.com/lobbies every se
 
 [www.autojoiner.acoxi.com] (www.autojoiner.acoxi.com)
 
-### Web Page (NO LONGER WORKS)
+### Stand Alone
 
 [Stand Alone Executable] (https://github.com/EldinZenderink/TF2CAutoJoiner/blob/master/Outdated%20C%23%20application/Executable/TF2C%20Auto%20Joiner.exe?raw=true)
 
